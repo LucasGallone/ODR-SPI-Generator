@@ -82,8 +82,8 @@ Your logo files must follow a specific naming convention to be correctly identif
 | **Radio Service (Miniature)** | 32 x 32 | `f9f5-32x32.png` | Logo in the stations list |
 | **Radio Service (Rectangle)** | 112 x 32 | `f9f5-112x32.png` | Display bar on certain car tuners |
 | **Radio Service (Wide screen)** | 320 x 240 | `f9f5-320x240.png` | Wide logo displayed before SLS decoding |
-| **Ensemble Logo (Miniature)** | 32 x 32 | `f01d-32x32.png` | Ensemble logo displayed next to its name |
-| **Ensemble Logo (Wide screen)** | 320 x 240 | `f01d-320x240.png` | Wide logo for the ensemble |
+| **Multiplex Logo (Miniature)** | 32 x 32 | `f01d-32x32.png` | Multiplex logo displayed next to its name |
+| **Multiplex Logo (Wide screen)** | 320 x 240 | `f01d-320x240.png` | Wide logo for the multiplex |
 
 In the examples above, the radio station SID is F9F5 and is present on a multiplex with F01D EID.
 <br>
