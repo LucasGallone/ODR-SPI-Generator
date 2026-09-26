@@ -11,7 +11,7 @@ The aim is to simplify implementation by using a simple local directory of logos
 
 This script generates a SPI binary carousel compliant with the **ETSI TS 102 371** and **ETSI TS 102 818** specifications.
 <br>
-Decoding has been tested with success using the [AbracaDABra](https://github.com/KejPi/AbracaDABra) software, and should theoretically work with DAB+ car radios, although this has not been tested.
+Decoding has been tested with success using the [AbracaDABra](https://github.com/KejPi/AbracaDABra) software, and should theoretically work with DAB+ car tuners, although this has not been tested.
 
 ---
 
@@ -55,8 +55,8 @@ sudo pip3 install git+https://github.com/GlobalRadio/python-mot-epg.git
 
 # Basic SPI library
 git clone https://github.com/magicbadger/python-hybridspi.git ~/python-hybridspi
-sudo cp -r ~/python-hybridspi/src/spi /usr/local/lib/python3.11/dist-packages/
-sudo chmod -R a+rX /usr/local/lib/python3.11/dist-packages/spi
+sudo cp -r ~/python-hybridspi/src/spi $(python3 -c "import site; print(site.getsitepackages()[0])")/
+sudo chmod -R a+rX $(python3 -c "import site; print(site.getsitepackages()[0])")/spi
 ```
 > The '--break-system-packages' argument might be needed in some cases, at the end of the 'sudo pip3' commands.
 
@@ -81,6 +81,7 @@ Your logo files must follow a specific naming convention to be correctly identif
 | :--- | :---: | :--- | :--- |
 | **Radio Service (Miniature)** | 32 x 32 | `f9f5-32x32.png` | Logo in the stations list |
 | **Radio Service (Rectangle)** | 112 x 32 | `f9f5-112x32.png` | Display bar on certain car tuners |
+| **Radio Service (Square)** | 128 x 128 | `f9f5-128x128.png` | High-res square logo on compatible receivers |
 | **Radio Service (Wide screen)** | 320 x 240 | `f9f5-320x240.png` | Wide logo displayed before SLS decoding |
 | **Multiplex Logo (Miniature)** | 32 x 32 | `f01d-32x32.png` | Multiplex logo displayed next to its name |
 | **Multiplex Logo (Wide screen)** | 320 x 240 | `f01d-320x240.png` | Wide logo for the multiplex |
@@ -143,8 +144,8 @@ sub-spi {
         type packet
         bitrate 16
         id 18
-        protection-profile EEP_A
-        protection 3
+        protection-profile EEP_B
+        protection 4
         inputproto file
         inputuri "/home/odr/ODR-mmbTools/config/mot/spi-output.dat"
     }
@@ -222,7 +223,7 @@ sudo supervisorctl update
 ---
 
 ### 📄 License
-This script is distributed under the GNU 3.0 license. [Click here for more details.](https://github.com/LucasGallone/ODR-SPI-Generator/blob/main/LICENSE)
+This script is distributed under the GNU General Public License v3.0 (GPLv3). [Click here for more details.](https://github.com/LucasGallone/ODR-SPI-Generator/blob/main/LICENSE)
 <br>
 <br>
 It was developed based on ["odr-radiodns-bridge"](https://github.com/nickpiggott/odr-radiodns-bridge), created by Nick Piggott and distributed under the LGPL 2.1 license.
