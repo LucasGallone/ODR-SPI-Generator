@@ -1,6 +1,6 @@
-# SPI Logos Generator for OpenDigitalRadio DAB+ multiplexes
+# SPI Logos Generator for ODR DAB+ multiplexes
 
-100% offline **DAB+ SPI (Service and Programme Information / Logos)** data stream generator for **ODR-DabMux** (OpenDigitalRadio).
+100% offline **DAB+ SPI (Service and Programme Information / Logos)** data stream generator for OpenDigitalRadio (ODR) DAB+ multiplexes.
 <br>
 This is a modified version of "odr-radiodns-bridge" created by Nick Piggott.
 <br>
