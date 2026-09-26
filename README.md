@@ -174,7 +174,7 @@ Example: `address 0x1` in the ODR-DabMux file for `CONF_PACKET_ADDRESS = 1` in t
 
 ---
 
-### 🚀 5. Using and starting the SPI Generator
+## 🚀 5. Using and starting the SPI Generator
 
 The generator only needs to be run once to generate your SPI data stream after placing the logos in your local directory.
 <br>
