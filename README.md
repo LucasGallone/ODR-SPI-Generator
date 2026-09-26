@@ -115,7 +115,7 @@ CONF_DATAGROUP = False                                                  # Works 
 
 ---
 
-### ⚙️ 4. ODR-DabMux file configuration
+## ⚙️ 4. ODR-DabMux file configuration
 
 The easiest way to configure your ODR-DabMux file, including your SPI service, is to use my generator at the following address:
 <br>
