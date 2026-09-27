@@ -82,7 +82,7 @@ class Generator:
         nowutc32 = int(datetime.today().timestamp()) & 0x7FFFFFFF
 
         print(f"\nScanned logo folder: {local_dir}")
-        print(f"Radio services found in the odr-dabmux file: {len(services_config)}\n")
+        print(f"Services found in the odr-dabmux file: {len(services_config)}\n")
 
         for s in services_config:
             bearer = s.get("bearer")
